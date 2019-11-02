@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class='box'>
+<h1>Share Your Race/Training Expierences</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Date</th>
+      <th>Content</th>
+      <th>Picture</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @blog_posts.each do |blog_post| %>
+    <div class="flex-container">
+      <tr>
+        <td><%= blog_post.title %></td>
+        <td><%= blog_post.user.email %></td>
+        <td><%= blog_post.date %></td>
+        <td><%= blog_post.content %></td><br>
+        <td><%= image_tag blog_post.picture_url, width: '50%' if blog_post.picture.present? %></td>
+        <td><%= link_to 'Post', blog_post, :class => "button" %></td>
+        <td><%= link_to 'Edit', edit_blog_post_path(blog_post), :class => "button" %></td>
+        <td><%= link_to 'Delete', blog_post, :class => "button", method: :delete, data: { confirm: 'Yo, Wait, Are you Sure?' } %></td>
+      </tr>
+      </div>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+<br>
+
+<%= link_to 'New Blog Post', new_blog_post_path, :class => "button" %>

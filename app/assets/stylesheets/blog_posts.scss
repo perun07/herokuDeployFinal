@@ -1,0 +1,46 @@
+// Place all the styles related to the blogPosts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    text-decoration-color: white;
+    
+  }
+
+  .text {
+      text-decoration-color: white;
+  }
+
+  .button {
+    background-color: blue; /* Green */
+    border: none;
+    color:blue;
+    text-decoration-color: black;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 2px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  .button {
+    background-color:white;
+    text-decoration-color: black;
+    color: black; 
+    border: 2px solid  rgb(43, 109, 250);
+  }
+  
+  .button:hover {
+    background-color: rgb(43, 109, 250);
+    text-decoration-color: black;
+    color: white;
+  }
+
+  .p {
+      padding: 5pt;
+  }

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+
+
+<div class='box'>
+<h1>Upcoming Race Cambridge Races Below</h1>
+ <% if @results %>
+ <% @results.each do |results| %> <br>
+ <%= image_tag results ["assetImages"][0].fetch('imageUrlAdr', {}) %><br>
+<%= content_tag results ["assetDescriptions"][0].fetch('description') %>
+ <% end %>
+ <% end %>
+</div>
+
+

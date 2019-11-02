@@ -1,0 +1,13 @@
+<h1>Pages#home</h1>
+<p>Find me in app/views/pages/home.html.erb</p>
+
+<h1>Here are your results for </h1>
+
+<div class="col-md-6">
+  <h2>Find a new adventure</h2>
+  <%= form_tag("results", method: "post") do %>
+    <%= label_tag("Park Name") %>
+    <%= text_field_tag(:pname) %>
+    <%= submit_tag("Search") %>
+  <% end %>
+</div>
